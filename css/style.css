@@ -1,0 +1,165 @@
+@font-face {
+font-family: roboto;
+src: url(../Roboto-Light.ttf); }
+
+body{
+  max-width: 50em;
+  font-size: 1rem;
+  font-family: roboto;
+  margin: 0 auto;
+  display: block;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight:bolder;
+}
+
+h1{
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p{
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  text-align: justify;
+}
+
+header{
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+}
+article{
+  margin-top: 50px;
+}
+
+.larissa img{
+  width: 70%;
+  margin: 20px auto;
+  display: block;
+}
+
+.larissa p{
+  width: 70%;
+  margin: 20px auto;
+  display: block;
+}
+
+.portfolio img{
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+}
+
+footer p{
+  text-align: center;
+}
+
+@supports (grid-area: auto) {
+
+     @media screen and (min-width: 55em) {
+
+       body{ max-width:none;}
+
+       p{
+         font-size: 1.2rem;
+          line-height: 1.3rem;
+          text-align: left;}
+
+      h1{
+        font-size: 3rem;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+       header{width: 60%;}
+
+       article{
+         width: 80%;
+         margin: 50px auto;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows:auto;
+         grid-column-gap: 1em;
+       }
+
+
+       .larissa img , .larissa p{
+         width: 100%;}
+
+         .larissa h1{
+           grid-column-start:1;
+           grid-column-end:3;
+           grid-row:1;
+         }
+
+        .larissa img{
+          grid-column:1;
+          grid-row:2;
+        }
+
+        .larissa p{
+          grid-column:2;
+          grid-row:2;
+        }
+
+        .portfolio img{ width: 100%;}
+
+        .portfolio h1{
+          grid-column-start:1;
+          grid-column-end:3;
+          grid-row:1;
+        }
+
+        @media screen and (min-width: 70em){
+          article{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          }
+          header{ width: 50%;}
+
+          .larissa{width: 60%;}
+
+          .portfolio{ width: 90%;}
+
+          .larissa h1{
+            grid-column-start:1;
+            grid-column-end:5;
+            grid-row:1;
+          }
+          .larissa img{
+            grid-column-start:1;
+            grid-column-end:3;
+            grid-row:2;
+          }
+
+          .larissa p{
+            grid-column-start:3;
+            grid-column-end:5;
+            grid-row:2;
+          }
+
+          .portfolio h1{
+            grid-column-start:1;
+            grid-column-end:5;
+            grid-row:1;
+          }
+
+          .foto13{
+            grid-column:3;
+            grid-row:2;
+          }
+
+          .foto14{
+            grid-column:4;
+            grid-row:2;
+          }
+
+          .portfolio .foto7 , .portfolio .foto6{ display: none;}
+
+        }
+     }
